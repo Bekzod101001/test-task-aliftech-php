@@ -26,7 +26,7 @@ Description: Book a room for specific time by room id (as last arg)
     Example: php index.php booking:store Bekzod Bobokhonov itprogressuz@gmail.com 15:00 16:00 1
 
 
-Project is dockerized. Webserver running on localhost:80
+Project is dockerized. 
 
 ### How to install:
 1. make .env file from .env.example - all credentials in .env.example are valid(it's not secure but convenient way, just for testing purposes)
