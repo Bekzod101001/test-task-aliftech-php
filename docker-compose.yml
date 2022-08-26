@@ -10,16 +10,6 @@ services:
       dockerfile: Dockerfile
     volumes:
       - './src:/var/www/html'
-  nginx:
-    depends_on:
-      - database
-      - php
-    image: nginx:latest
-    volumes:
-      - './src:/var/www/html'
-      - './docker/nginx/conf.d:/etc/nginx/conf.d'
-    ports:
-      - "80:80"
 
   database:
     image: mysql:latest
@@ -32,6 +22,7 @@ services:
       - "3306:3306"
     volumes:
       - './mysql:/var/lib/mysql'
+
   composer:
     image: composer:latest
     depends_on:
